@@ -5,7 +5,7 @@ import Sidebar from '../components/Sidebar' // ✅ Import Sidebar
 
 const Homepage = () => {
 
-  const[selectedUser, ] = useState(false)
+  const[selectedUser,setSelectedUser ] = useState(false)
 
   return (
     <div className="w-full h-screen sm:px-[15%] sm:py-[5%] text-white">
@@ -16,9 +16,9 @@ const Homepage = () => {
       : 'md:grid-cols-2'
   }`}
 >
-        <Sidebar />          {/* Left Sidebar */}
-        <ChatContainer />    {/* Center Chat */}
-        <RightSidebar />     {/* Right Sidebar */}
+        <Sidebar selectedUser={selectedUser} setSelectedUser={setSelectedUser} />         
+        <ChatContainer selectedUser={selectedUser} setSelectedUser={setSelectedUser} />  
+        <RightSidebar selectedUser={selectedUser} setSelectedUser={setSelectedUser} />    
     </div>
     </div>
   )
