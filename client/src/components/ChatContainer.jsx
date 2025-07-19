@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import assests, { messagesDummyData } from "../assets/assets";
 import assets from "../assets/assets";
+import { formatMessageTime } from "../lib/utils";
 
 const ChatContainer = ({ selectedUser, setSelectedUser }) => {
 
@@ -48,7 +49,7 @@ const ChatContainer = ({ selectedUser, setSelectedUser }) => {
             )}
             <div className='text-center text-xs'>
   <img src={ msg.senderId === '680f50e4f10f3cd28382ecf9' ? assets.avatar_icon : assets.profile_martin} alt="" className='w-7 rounded-full'/>
-  <p className='text-gray-500'>{msg.createdAt}</p>
+  <p className='text-gray-500'>{ formatMessageTime(msg.createdAt)}</p>
 </div>
           </div>
         ))}
