@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import Sidebar from '../components/Sidebar'
 import ChatContainer from '../components/ChatContainer'
 import RightSidebar from '../components/RightSidebar'
